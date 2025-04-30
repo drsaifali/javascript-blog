@@ -103,8 +103,12 @@ body {
 
 .post {
   display: none;
+  opacity: 0;
   &.active {
     display: block;
+    opacity: 1;
+    z-index: 2;
+    transition: opacity 2s ease;
   }
 }
 
@@ -116,5 +120,22 @@ body {
   display: flex;
   p {
     margin: 0 10px 0 0;
+  }
+}
+
+.titles a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.titles a:hover {
+  color: #e67e22;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 1rem 3rem;
+    display: block;
   }
 }
